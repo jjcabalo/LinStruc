@@ -64,12 +64,12 @@ public class QueuesMenu extends JFrame {
         isFullButton.setBounds(512, 235, 145, 113);
         layeredPane.add(isFullButton, Integer.valueOf(1));
 
-        JButton peekButton = new JButton();
-        peekButton.setContentAreaFilled(false);
-        peekButton.setBorderPainted(false);
-        peekButton.setIcon(new ImageIcon(QueuesMenu.class.getResource("/assets/Peek.png")));
-        peekButton.setBounds(132, 350, 145, 113);
-        layeredPane.add(peekButton, Integer.valueOf(1));
+        JButton front_rearButton = new JButton();
+        front_rearButton.setContentAreaFilled(false);
+        front_rearButton.setBorderPainted(false);
+        front_rearButton.setIcon(new ImageIcon(QueuesMenu.class.getResource("/assets/Front-Rear.png")));
+        front_rearButton.setBounds(132, 350, 145, 113);
+        layeredPane.add(front_rearButton, Integer.valueOf(1));
 
         JButton clearButton = new JButton();
         clearButton.setContentAreaFilled(false);
@@ -125,10 +125,10 @@ public class QueuesMenu extends JFrame {
             }
         });
 
-        peekButton.addActionListener(new ActionListener() {
+        front_rearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String result = queues.peek();
+                String result = queues.Front_Rear();
                 JOptionPane.showMessageDialog(null, result);
             }
         });

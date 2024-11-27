@@ -38,9 +38,9 @@ public class Queues {
         return rear == size;
     }
 
-    public String peek() {
+    public String Front_Rear() {
         if (front < rear) {
-            return "Front: " + queueArray[front];
+            return "Front: " + queueArray[front] + " Rear: " + queueArray[rear - 1];
         } else {
             return "Queue is empty";
         }
